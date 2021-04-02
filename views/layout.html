@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+     
+     <meta charset="utf-8">
+     <title>SCE</title>
+     <link rel="icon" type="image/png" sizes="16x16" href="../contenu/img/logolgm.png">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="../styles/bootstrap.min.css">
+     <link rel="stylesheet" href="../styles/style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
+     <script src="../scripts/bootstrap.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+     <script src="https://code.highcharts.com/highcharts.js"></script>
+     <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+     <script src="https://code.highcharts.com/modules/export-data.js"></script>
+     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+     
+     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="../scripts/high3.js"></script>
+    <script src="../scripts/high4.js"></script>
+    <script src="../scripts/affichage.js"></script>
+    <script src="../scripts/consommation.js"></script>
+
+     <script src="https://code.highcharts.com/highcharts.src.js"></script>
+     <script src="../scripts/high.js"></script>
+     <script src="../scripts/high2.js"></script>
+     <script src="../scripts/deroulante.js"></script>
+     <script src="../scripts/actualise.js"></script>
+
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+
+    <title>SCE</title>
+  </head>
+  <body>
+    <h1>SCE</h1>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/Interface_code/src/public/index.php/"><img src="../contenu/img/logolgm.png"></a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/Interface_code/src/public/index.php/" >Accueil
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Historique des données</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Contact</a>
+        </li>
+        <li class="nav-item">
+   
+          <a href="" class="nav-link" data-toggle="modal" data-target="#exampleModal">Connexion</a>
+            
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</nav>
+      
+      <!-- Modal réunion -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title text-danger" id="exampleModalLabel">Connexion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+    
+    
+        <div class="lock">
+      <div class="modal-body">
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Identifiant" name="Identifiant" >
+        <form  action="admin" method="post">
+      
+          <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+          <div class="input-group mb-2 mr-sm-2">
+           
+             
+            </div>
+            
+            <input type="password" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Mot de passe" name="mot_de_passe" >
+            <br><a href="change"><h7>Modifier votre mot de passe</h7></a>
+          </div>
+          
+    
+        </div>
+      
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        <button type="submit" class="btn btn-danger" >Valider</button>
+        </div>
+       </form>
+    
+        </div>
+        </div>
+        </div><!--fin Modal-->
+        {% block content %} 
+        {% endblock %}
+      
+
+
+   </body>
+   </html>
+   

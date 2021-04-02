@@ -1,0 +1,31 @@
+{%extends "layout.html"%}
+{% block content %}
+<div class="container"> 
+  
+    <h1 class="display-4 text-center text-danger mt-5">Modifier votre mot de passe</h1>
+    <p class="text-muted mb-5 text-center">Veuillez entrer vos identifiants</p>
+  
+  
+
+    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Identifiant" name="Identifiant" >
+    <form  action="changepost" method="post">
+  
+      <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+    
+        <br>
+    <div>
+        <input type="password" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Mot de passe actuel" name="old" >
+    </div>
+    <br>
+    <div>
+        <input type="password" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Nouveau mot de passe" name="new" >
+    </div>
+    <br>
+    <div>
+    <input type="password" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Confirmer mot de passe" name="new2" >
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Valider</button>  
+    
+</form>
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% block javascripts %}
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="../scripts/high.js"></script>
+
+{% endblock %}
+
+<!-- Tab panes -->
+
+<section class="main">
+<div class="container"> 
+  
+  <h1 class="display-4 text-center text-danger mt-5">Consommation Électrique du LGM</h1>
+  <p class="text-muted mb-5 text-center">Il y a beaucoup de variation entre les differents jours de la semaine.</p>
+
+
+  <div class="row">
+
+<div class="card-columns">
+  <div class="card shadow border-0">
+    <a href="journalier">
+      <div id="graphique2" style="width: 100%; height: 400px;" LTP="{{ LTP }}" LTS1="{{ LTS1 }}" LTS2="{{ LTS2 }}" LTS3="{{ LTS3 }}" LTS4="{{ LTS4 }}" LTS5="{{ LTS5 }}" LTS6="{{ LTS6 }}"></div>
+    <div class="card-body">
+      <h5 class="card-title">Comparatif global</h5>
+      <p class="card-text">Comparez l'impact énergétique des différents locaux selon l'intervalle souhaité.
+        .</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    
+    </div>
+  </a>
+    </div>
+<div class="card shadow border-0">
+  <a href="hebdomadaire">
+    <div id="graphiqueLTPs" style="width: 100%; height: 350px;" target="{{ val }}"></div>
+<div class="card-body">
+  <h5 class="card-title">Consommation vue hebdomadaire</h5>
+  <p class="card-text">
+   Consultez la consommation en vue hebdomadaire des différents locaux et comparez la avec celle des semaines précédente.</p>
+  <footer class="blockquote-footer">
+    <small class="text-muted">
+      Someone famous in <cite title="Source Title">Source Title</cite>
+    </small>
+  </footer>
+</div>
+</a>
+</div>
+
+  <div class="card shadow border-0">
+    <a href="total">
+      <div id="graphique3" style="width: 100%; height: 375px;" target="{{ val }}"></div>
+    <div class="card-body">
+      <h5 class="card-title">Supervision de la consommation</h5>
+      <p class="card-text">Il s'agit d'une carte plus longue avec un texte de soutien ci-dessous comme une entrée naturelle vers du contenu supplémentaire.</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </div>
+  </a>
+    </div>
+
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<section class="py-5 text-center">
+  <div class="container"> 
+  
+  
+  
+<div class="container">
+<div class="row">
+<a href="oui">
+<div class="col-xl-3 col-md-6 mb-4">
+  <div class="card border-0 shadow">
+  <img src="../contenu/img/vue.png" alt="Avatar">
+    <div class="card-body text-center">
+      <h5 class="card-title mb-0">Temps réel</h5>
+      <div class="card-text text-black-50">Lien vers site de Jordan</div>
+    </div>
+  </div>
+</a>
+</div>
+
+<div class="col-xl-3 col-md-6 mb-4">
+  <div class="card border-0 shadow">
+    <div id="graphique5" style="width: 100%; height: 200px;" target="{{ val }}"></div>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-0">Consommation</h5>
+      <div class="card-text text-black-50">Web Developer</div>
+    </div>
+  </div>
+</div>
+<div class="col-xl-3 col-md-6 mb-4">
+  <div class="card border-0 shadow">
+  <img src="../contenu/img/vue.png" alt="Avatar">
+    <div class="card-body text-center">
+      <h5 class="card-title mb-0">Impact écologique</h5>
+      <div class="card-text text-black-50">Web Developer</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-xl-3 col-md-6 mb-4">
+  <div class="card border-0 shadow">
+  <img src="../contenu/img/vue.png" alt="Avatar">
+    <div class="card-body text-center">
+      <h5 class="card-title mb-0">Impact écologique</h5>
+      <div class="card-text text-black-50">Web Developer</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</div>
+  </div>
+</section>
+</div>
+
+
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="container"> 
+
+    <p class="mb-0 text-center pt-2">© 2021 Copyright</p>
+        <footer class="blockquote-footer text-center mb-2">SCE Designing</footer>
+
+  </div>
+  
+  <!-- Copyright -->
+</footer>
+
+{% endblock %}
+

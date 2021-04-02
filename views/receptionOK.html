@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="main">
+  <div class="container"> 
+    
+    <h1 class="display-4 text-center text-danger mt-5">Historique de la consommation</h1>
+    <p class="text-muted mb-5 text-center">Il y a beaucoup de variation entre les differents jours de la semaine.</p>
+
+<div id="messages">
+
+</div>
+<table class="table table-striped table-bordered mt-5">
+  {% for item in items %}
+  {% if '\.' in '{{item.name}}' %}
+  <tr><td><a href="\monitor\{{ item.name }}"target="_blank">{{item.name}}</a></td>
+  {% endif %}
+      
+      <td>{{ item.path }}</td>
+      <td>{{ item.date }}</td>
+      <td>{{ item.operation }}
+        {% if item.operation == 'CREATE' %}
+        <img src="contenu/img/ok.png" alt="texte alternatif" class="image_ok" />
+          {% endif %}
+          {% if item.operation == 'WRITE' %}
+          <img src="contenu/img/change.png" alt="texte alternatif" class="image_change" />
+            {% endif %}
+      </td>
+      </tr>
+  {% endfor %}
+  </table>
+ 
+
+{% endblock %}

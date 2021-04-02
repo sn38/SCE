@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+  
+  <section class="main">
+    <div class="container"> 
+      
+      <h1 class="display-4 text-center text-danger mt-5">Consommation hebdomadaire</h1>
+      <p class="text-muted mb-5 text-center">Il y a beaucoup de variation entre les differents jours de la semaine.</p>
+  
+ 
+  <select name="maliste" class="btn btn-danger dropdown-toggle text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="afficheDiv(this.value);">
+
+  <option class="btn btn-dark" value="0"> Choisir un local </option>
+  <option class="btn btn-dark" value="LTP">LTP</option>
+  <option class="btn btn-dark" value="LTS1">LTS 1</option>
+  <option class="btn btn-dark" value="LTS2">LTS 2</option>
+  <option class="btn btn-dark" value="LTS3">LTS 3</option>
+  <option class="btn btn-dark" value="LTS4">LTS 4</option>
+  <option class="btn btn-dark" value="LTS5">LTS 5</option> 
+  <option class="btn btn-dark" value="LTS6">LTS 6</option>
+  
+  </select></section>
+  <br>
+  <div id="LTP" class="mesDiv" style="display:none">
+      <div id="graphiqueLTPs" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+  </div>
+  
+  <div id="LTS1" class="mesDiv" style="display:none">
+      <div id="graphiqueLTS1s" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+  </div>
+
+  <div id="LTS2" class="mesDiv" style="display:none">
+      <div id="graphiqueLTS2s" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+  </div>
+
+  <div id="LTS3" class="mesDiv" style="display:none">
+    <div id="graphiqueLTS3s" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+  </div>
+
+  <div id="LTS4" class="mesDiv" style="display:none">
+    <div id="graphiqueLTS4s" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+  </div>
+
+  <div id="LTS5" class="mesDiv" style="display:none">
+    <div id="graphiqueLTS5s" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+  </div>
+
+  <div id="LTS6" class="mesDiv" style="display:none">
+    <div id="graphiqueLTS6s" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+  </div>
+
+{% endblock %}

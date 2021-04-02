@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+{% block javascripts %}
+
+
+{% endblock %}
+
+<section class="main">
+    <div class="container"> 
+      
+      <h1 class="display-4 text-center text-danger mt-5">Historique de la consommation</h1>
+      <p class="text-muted mb-5 text-center">Il y a beaucoup de variation entre les differents jours de la semaine.</p>
+  
+</section>
+
+<div class="text-center">
+  <button type="button" class="btn btn-danger" onclick="afficheDiv('LTP')">Vue par Heures</button>
+  <button type="button" class="btn btn-danger" onclick="afficheDiv('LTS1')">Vue par Jours</button>
+  <button type="button" class="btn btn-danger" onclick="afficheDiv('LTS2')">Vue par Mois</button>
+</div>
+
+
+
+</select></section>
+
+<div id="LTP" class="mesDiv" style="display:none">
+<h3 class="text-center text-danger mt-5">Vue par Heures</h3>
+<div id="graphique3" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+<h3 class="text-center text-danger mt-5">Comparaison par locaux</h3>
+<div id="graphique2" style="width: 100%; height: 400px;" LTP="{{ LTP }}" LTS1="{{ LTS1 }}" LTS2="{{ LTS2 }}" LTS3="{{ LTS3 }}" LTS4="{{ LTS4 }}" LTS5="{{ LTS5 }}" LTS6="{{ LTS6 }}"></div>
+</div>
+
+<div id="LTS1" class="mesDiv" style="display:none">
+<div id="graphiqueAllj" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+</div>
+
+<div id="LTS2" class="mesDiv" style="display:none">
+<div id="graphiqueAllm" style="width: 100%; height: 400px;" target="{{ val }}"></div>
+</div>
+
+
+{% endblock %}
